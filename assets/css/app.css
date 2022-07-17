@@ -1,0 +1,132 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    --fs-15: 15px;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("./../fonts/overpass/overpass-regular.otf");
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    font-family: "Overpass";
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fluid {
+    padding: 15px;
+    background: var(--very-dark-blue);
+    border-radius: 50%;
+}
+
+.card {
+    width: 25%;
+    background: var(--dark-blue);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.card-title {
+    font-weight: var(--fw-700);
+    color: var(--white);
+}
+
+.card-text {
+    color: var(--light-grey);
+    font-weight: var(--fw-400);
+    line-height: 25px;
+}
+
+.card-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-bordered {
+    color: var(--orange);
+    background: var(--very-dark-blue);
+    border-radius: 25px;
+    font-weight: 100;
+    text-align: center;
+    padding: 0px;
+    font-size: var(--fs-15);
+    padding-inline: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0.7;
+}
+
+.rating-item {
+    background-color: var(--very-dark-blue);
+    color: var(--light-grey);
+    border-radius: 100%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.rating-item:focus {
+    background: var(--light-grey);
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: var(--fw-700);
+    letter-spacing: 3px;
+    font-size: var(--fs-15);
+}
+
+.btn-primary {
+    background: var(--orange);
+}
+
+.btn-primary:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.rating-item:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/** For desktop */
+@media (max-width: 1440px) {
+    .card {
+        width: 25%;
+    }
+}
+
+/** For mobile */
+@media (min-width: 280px) and (max-width: 650px) {
+    .card {
+        min-width: 80%;
+    }
+}
